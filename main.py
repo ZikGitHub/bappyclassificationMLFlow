@@ -9,9 +9,9 @@ import mlflow
 dagshub.init(repo_owner='ZikGitHub', repo_name='bappyclassificationMLFlow', mlflow=True)
 
 
-with mlflow.start_run():
-  mlflow.log_param('parameter name', 'value')
-  mlflow.log_metric('metric name', 1)
+# with mlflow.start_run():
+#   mlflow.log_param('parameter name', 'value')
+#   mlflow.log_metric('metric name', 1)
 
 STAGE_NAME = "Data Ingestion stage"
 
