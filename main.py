@@ -9,10 +9,6 @@ import mlflow
 dagshub.init(repo_owner='ZikGitHub', repo_name='bappyclassificationMLFlow', mlflow=True)
 
 
-# with mlflow.start_run():
-#   mlflow.log_param('parameter name', 'value')
-#   mlflow.log_metric('metric name', 1)
-
 STAGE_NAME = "Data Ingestion stage"
 
 try:
@@ -38,6 +34,7 @@ except Exception as e:
 
 
 STAGE_NAME = "Training"
+
 try:
     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
     obj = ModelTrainingPipeline()
@@ -49,6 +46,7 @@ except Exception as e:
 
 
 STAGE_NAME = "Evaluation stage"
+
 try:
     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
     obj = EvaluationPipeline()
